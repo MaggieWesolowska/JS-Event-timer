@@ -24,7 +24,6 @@ const eventSpan = document.querySelector('.event');
 
 let usersTime;
 
-// https://cdn.pixabay.com/photo/2020/02/07/14/49/glacier-4827387_960_720.jpg
 const appUpdate = () => {
   eventSpan.textContent = eventName.value;
   usersTime = new Date(
