@@ -20,6 +20,7 @@ const secondsCount = document.querySelector(
 );
 
 const saveBtn = document.querySelector('.save');
+const stopBtn = document.querySelector('.stop');
 const eventSpan = document.querySelector('.event');
 
 let usersTime;
@@ -48,6 +49,10 @@ const appUpdate = () => {
   setTime();
 };
 
+const stopInterval = () => {
+  clearInterval(interval);
+};
+
 settingsBtn.addEventListener('click', () => {
   settings.classList.toggle('active');
 });
@@ -55,4 +60,6 @@ settingsBtn.addEventListener('click', () => {
 saveBtn.addEventListener('click', appUpdate);
 
 appUpdate();
-setInterval(setTime, 1000);
+const interval = setInterval(setTime, 1000);
+
+stopBtn.addEventListener('click', stopInterval);
