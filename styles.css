@@ -28,6 +28,20 @@ body {
   overflow: hidden;
 }
 
+/* @media screen and (min-width: 780px) {
+  .app-body {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app-body {
+    width: 800px;
+    height: 800px;
+  }
+} */
+
 .image-section {
   position: relative;
   height: 400px;

@@ -49,17 +49,18 @@ const appUpdate = () => {
   setTime();
 };
 
-const stopInterval = () => {
-  clearInterval(interval);
-};
-
 settingsBtn.addEventListener('click', () => {
   settings.classList.toggle('active');
 });
 
-saveBtn.addEventListener('click', appUpdate);
+saveBtn.addEventListener('click', () => {
+  appUpdate();
+  interval = setInterval(setTime, 1000);
+});
 
-appUpdate();
-const interval = setInterval(setTime, 1000);
+// appUpdate();
+// const interval = setInterval(setTime, 1000);
 
-stopBtn.addEventListener('click', stopInterval);
+stopBtn.addEventListener('click', () => {
+  clearInterval(interval);
+});
